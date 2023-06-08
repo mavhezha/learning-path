@@ -16,6 +16,14 @@ function logger(req, res, next){
     next();
 }
 
+function auth(req, res, next){
+    if(req.query.admin === "xavi"){
+        
+    }
+    console.log("Auth!");
+    next();
+}
+
 app.listen(5000, (req,res) => {
     console.log("Server listening to PORT 50000...")
 });
